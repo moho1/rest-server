@@ -148,7 +148,7 @@ func isUserPath(username, path string) bool {
 	if !strings.HasPrefix(path, prefix) {
 		return false
 	}
-	return len(path) == len(prefix) || path[len(prefix)] == '/'
+	return len(path) == len(prefix) || path[len(prefix)] == '/' || path[len(prefix)] == '+'
 }
 
 // AuthHandler wraps h with a http.HandlerFunc that performs basic authentication against the user/passwords pairs
